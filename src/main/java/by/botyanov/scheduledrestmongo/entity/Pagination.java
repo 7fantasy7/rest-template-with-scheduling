@@ -1,4 +1,4 @@
-package ru.zaimix.botynaov.entity;
+package by.botyanov.scheduledrestmongo.entity;
 
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
@@ -12,49 +12,49 @@ import java.util.Map;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-        "type",
-        "datetime",
-        "duration"
+        "offset",
+        "limit",
+        "total"
 })
-public class Log {
+public class Pagination {
 
-    @JsonProperty("type")
-    private Integer type;
-    @JsonProperty("datetime")
-    private Integer datetime;
-    @JsonProperty("duration")
-    private Integer duration;
+    @JsonProperty("offset")
+    private Integer offset;
+    @JsonProperty("limit")
+    private Integer limit;
+    @JsonProperty("total")
+    private Integer total;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-    @JsonProperty("type")
-    public Integer getType() {
-        return type;
+    @JsonProperty("offset")
+    public Integer getOffset() {
+        return offset;
     }
 
-    @JsonProperty("type")
-    public void setType(Integer type) {
-        this.type = type;
+    @JsonProperty("offset")
+    public void setOffset(Integer offset) {
+        this.offset = offset;
     }
 
-    @JsonProperty("datetime")
-    public Integer getDatetime() {
-        return datetime;
+    @JsonProperty("limit")
+    public Integer getLimit() {
+        return limit;
     }
 
-    @JsonProperty("datetime")
-    public void setDatetime(Integer datetime) {
-        this.datetime = datetime;
+    @JsonProperty("limit")
+    public void setLimit(Integer limit) {
+        this.limit = limit;
     }
 
-    @JsonProperty("duration")
-    public Integer getDuration() {
-        return duration;
+    @JsonProperty("total")
+    public Integer getTotal() {
+        return total;
     }
 
-    @JsonProperty("duration")
-    public void setDuration(Integer duration) {
-        this.duration = duration;
+    @JsonProperty("total")
+    public void setTotal(Integer total) {
+        this.total = total;
     }
 
     @JsonAnyGetter
@@ -69,12 +69,11 @@ public class Log {
 
     @Override
     public String toString() {
-        return "Log{" + "type=" + type +
-                ", datetime=" + datetime +
-                ", duration=" + duration +
+        return "Pagination{" + "offset=" + offset +
+                ", limit=" + limit +
+                ", total=" + total +
                 ", additionalProperties=" + additionalProperties +
                 '}';
     }
 
 }
-

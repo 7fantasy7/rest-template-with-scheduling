@@ -1,4 +1,4 @@
-package ru.zaimix.botynaov.entity.spec;
+package by.botyanov.scheduledrestmongo.entity.spec;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

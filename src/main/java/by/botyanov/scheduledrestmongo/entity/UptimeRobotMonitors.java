@@ -1,4 +1,4 @@
-package ru.zaimix.botynaov.entity;
+package by.botyanov.scheduledrestmongo.entity;
 
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;

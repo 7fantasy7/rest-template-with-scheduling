@@ -1,4 +1,4 @@
-package ru.zaimix.botynaov;
+package by.botyanov.scheduledrestmongo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
